@@ -1,0 +1,30 @@
+version: '2'
+services:
+    hub:
+        image: selenium/hub:3.7.1
+        ports:
+            - 4444:4444
+
+    node-chrome:
+        image: selenium/node-chrome-debug:3.7.1
+        ports:
+            - 5901:5900
+        depends_on:
+            - hub
+        environment:
+          HUB_PORT_4444_TCP_ADDR: hub
+          HUB_PORT_4444_TCP_PORT: 4444
+          no_proxy: localhost
+          HUB_ENV_no_proxy: localhost
+
+    node-firefox:
+        image: selenium/node-firefox-debug:3.7.1
+        ports:
+            - 5902:5900
+        depends_on:
+            - hub
+        environment:
+          HUB_PORT_4444_TCP_ADDR: hub
+          HUB_PORT_4444_TCP_PORT: 4444
+          no_proxy: localhost
+          HUB_ENV_no_proxy: localhost
