@@ -1,7 +1,7 @@
 Selenium-Maven-Template
 =======================
 
-A maven template for Selenium 3 that has the latest dependencies so that you can just check out and start writing tests in four easy steps.
+A maven template for Selenium 3 that has the latest dependencies so that you can just check out and start writing tests in easy steps.
 
 ### Requirements
 
@@ -23,8 +23,8 @@ git clone git@github.com:GuiRys/Selenium-Maven-Template.git
 
 ### Start test
 1. Open a terminal window/command prompt
-3. `cd Selenium-Maven-Template` (Or whatever folder you cloned it into)
-4. `mvn clean verify -Dremote=true -DseleniumGridURL=http://localhost:4444/wd/hub -Dbrowser=chrome`
+2. `cd Selenium-Maven-Template` (Or whatever folder you cloned it into)
+3. `mvn clean verify -Dremote=true -DseleniumGridURL=http://localhost:4444/wd/hub -Dbrowser=chrome`
 
 All dependencies should now be downloaded and the test will run automatically in a docker container in a chrome browser
 

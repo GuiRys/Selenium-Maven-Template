@@ -4,7 +4,6 @@ import com.lazerycode.selenium.DriverBase;
 import com.lazerycode.selenium.util.Query;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import com.lazerycode.selenium.page_objects.HomePage;
 import java.util.concurrent.TimeUnit;
 
 public class LoginPage {
